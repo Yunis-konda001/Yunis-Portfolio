@@ -1,0 +1,175 @@
+
+/* Reset styles for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    /* line-height: 1.6; */
+    color: white;
+}
+
+/* Styling the header section */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+
+.icons a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: brown;
+}
+
+.star {
+    color: brown;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: brown;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    gap: 2rem;
+    padding: 0.5rem;
+    align-items: center;
+    /* padding-top: 0.6rem; */
+}
+
+.img img {
+    max-width: 80%; /* Ensure image scales responsively */
+    height: auto;
+}
+
+.greeting {
+    padding: 1.5rem;
+}
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.btn button {
+    cursor: pointer;
+    font-family: "system-ui";
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgb(204, 0, 0) 0%, rgb(204, 14, 0) 64%);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.btn button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.hacker-title h2 {
+    color: brown;
+}
+
+/* Projects section */
+.projects {
+    text-align: center;
+    margin: 0 5%;
+    padding: 2rem 0;
+}
+
+.text {
+    white-space: normal; /* Allow text to wrap on small screens */
+    padding: 1.5rem;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+.experience {
+    font-size: 3rem; /* Adjusted for responsiveness */
+    margin-bottom: -1.5rem;
+    color: brown;
+    font-weight: bold;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 1rem;
+    }
+
+    .links {
+        gap: 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center-align content on smaller screens */
+        padding: 2rem;
+    }
+
+    .img img {
+        width: 100%; /* Ensure image scales for smaller screens */
+    }
+
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .experience {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        padding: 1rem;
+        flex-direction: column; /* Stack topbar items vertically */
+        align-items: center;
+    }
+
+    .links {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .name {
+        font-size: 1.6rem;
+    }
+
+    .experience {
+        font-size: 2rem;
+    }
+}
