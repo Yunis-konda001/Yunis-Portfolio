@@ -173,3 +173,148 @@ body {
         font-size: 2rem;
     }
 }
+
+/* add some gradients and animations to the buttons and links to make them more interactive. */
+
+.btn button {
+    background: linear-gradient(90deg, rgb(204, 0, 0) 0%, rgb(204, 14, 0) 64%);
+    transform: scale(1);
+}
+
+.btn button:hover {
+    background: linear-gradient(90deg, rgb(204, 0, 0) 0%, rgb(204, 14, 0) 64%);
+    transform: scale(1.05);
+}
+
+.links a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: brown;
+}
+
+.topbar {
+    background: linear-gradient(45deg, #000, #333, #000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+/* make the site responsive by adding media queries to adjust the layout for smaller screens. */
+
+@media (max-width: 768px) {
+    .topbar {
+        padding: 1rem;
+    }
+
+    .links {
+        gap: 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center-align content on smaller screens */
+        padding: 2rem;
+    }
+
+    .img img {
+        width: 100%; /* Ensure image scales for smaller screens */
+    }
+
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .experience {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        padding: 1rem;
+        flex-direction: column; /* Stack topbar items vertically */
+        align-items: center;
+    }
+
+    .links {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .name {
+        font-size: 1.6rem;
+    }
+
+    .experience {
+        font-size: 2rem;
+    }
+}
+
+/* add some gradients and animations to the buttons and links to make them more interactive. */
+
+.btn button {
+    background: linear-gradient(90deg, rgb(204, 0, 0) 0%, rgb(204, 14, 0) 64%);
+    transform: scale(1);
+}
+
+.btn button:hover {
+    background: linear-gradient(90deg, rgb(204, 0, 0) 0%, rgb(204, 14, 0) 64%);
+    transform: scale(1.05);
+}
+
+.links a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: brown;
+}
+
+
+/* Update shimmer effect to use a blue tinted gradient for better visibility on dark backgrounds */
+.about-section::before,
+.why-tech-section::before,
+.experience-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(52,152,219,0) 0%, rgba(52,152,219,0.5) 50%, rgba(52,152,219,0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 2s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+/* Add a drop shadow effect to the header for a more visually appealing appearance */
+.header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+}
+

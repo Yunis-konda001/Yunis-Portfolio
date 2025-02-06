@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 // The name to be typed
-const name = "Meet Dignitary Yunis";
+const name = "Meet Kumi Yunis";
 const nameElement = document.getElementById("typed-name");
 let index = 0;
 
